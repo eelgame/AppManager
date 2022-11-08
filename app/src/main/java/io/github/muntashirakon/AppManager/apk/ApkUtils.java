@@ -58,7 +58,7 @@ public final class ApkUtils {
         ApplicationInfo info = packageInfo.applicationInfo;
         Context ctx = AppManager.getContext();
         PackageManager pm = ctx.getPackageManager();
-        String outputName = FileUtils.getSanitizedFileName(info.loadLabel(pm).toString() + "_" +
+        String outputName = FileUtils.getSanitizedFileName(info.packageName + "_" +
                 packageInfo.versionName, false);
         if (outputName == null) outputName = info.packageName;
         Path tmpPublicSource;
